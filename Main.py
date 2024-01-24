@@ -6,7 +6,7 @@ from   tkinter import ttk  # Used for new Theme'd Objects
 base_url = "https://www.alphavantage.co/query?function="
 query   = "GLOBAL_QUOTE"
 symbol  = "IBM"
-api_key = "demo"
+api_key = "IZHAYZFSN4A3I5OY"
 
 url = base_url + query + "&symbol=" + symbol + "&apikey=" + api_key
 print("Request Sent to: \n", url, '\n')
@@ -35,5 +35,12 @@ stock_symbol = tk.StringVar()
 stock_symbol.set(symbol)
 stock_entry  = ttk.Entry(root, textvariable=stock_symbol, width=10, 
                font="Arial, 18", justify='center').grid(row=0, column=1)
+
+stock_high = ttk.Label(root, text = "Price High:").\
+                        grid(row=1, column=0, sticky="w")
+stock_high = tk.StringVar()
+stock_high.set(price)
+stock_entry  = ttk.Entry(root, textvariable=stock_high, width=10,
+               font="Arial, 18", justify='center').grid(row=1, column=1)
 
 root.mainloop()
