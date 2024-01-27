@@ -17,12 +17,6 @@ Fuel_Consumption = float(3)
 MPG = float(Miles_Driven / Fuel_Consumption)
 
 
-# def calc():
-# MD = float(Miles_Driven.get())
-# FC = float(Fuel_Consumption.get())
-# MPG = float(MD / FC)
-
-
 
 root  = tk.Tk()
 root.configure(bg='white')
