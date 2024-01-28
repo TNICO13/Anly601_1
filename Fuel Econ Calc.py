@@ -17,7 +17,6 @@ Fuel_Consumption = float(3)
 MPG = float(Miles_Driven / Fuel_Consumption)
 
 
-
 root  = tk.Tk()
 root.configure(bg='white')
 root.title("Fuel Economy Calculator")
@@ -27,8 +26,6 @@ style.theme_use('clam')
 style.configure("TButton", foreground="maroon", background="white", font="Arial, 15")
 style.configure("TEntry", fieldbackground='maroon', foreground="white")
 style.configure("TLabel", background='white')
-
-
 
 
 Miles_Driven_Label = ttk.Label(root, text = "Miles Driven:").grid(row=0, column=0, sticky="w")
@@ -42,7 +39,6 @@ Fuel_Consumption_Label = tk.StringVar()
 Fuel_Consumption_Label.set(Fuel_Consumption)
 entry  = ttk.Entry(root, textvariable=Fuel_Consumption_Label, width=10, font="Arial, 18", justify='right').grid(row=1, column=2)
 
-
 frame_break = ttk.Frame(root, height=2, relief="sunken", borderwidth=1)
 frame_break.grid(row=3, column=0, sticky="ew", pady=5)
 
@@ -55,13 +51,10 @@ frame_break.grid(row=3, column=2, sticky="ew", pady=5)
 spacer_frame = ttk.Frame(root, width=20, height=10, style="TLabel")  # Width is the space width
 spacer_frame.grid(row=4, column=1)
 
-
 MPG_Label = ttk.Label(root, text = "MPG:", anchor='e').grid(row=2, column=1)
 MPG_Label = tk.StringVar()
 MPG_Label.set(MPG)
 entry  = ttk.Entry(root, textvariable=MPG_Label, width=10, font="Arial, 18", justify='right').grid(row=2, column=2)
-
-
 
 calculate_button = ttk.Button(root, text="Calculate", command=Calculate).grid(row=5, column=1)
 
